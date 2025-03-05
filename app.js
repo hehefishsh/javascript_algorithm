@@ -358,40 +358,40 @@
 // }
 // minSum([2, 7, 3, 0, 6, 1, -5, -12, -11], 3); //-28
 
-function maxSum(arr, size) {
-  if (size > arr.length) {
-    return null;
-  }
-  let maxValue = 0;
-  for (let i = 0; i < size; i++) {
-    maxValue += arr[i];
-  }
-  let temValue = maxValue;
-  for (let j = size; j < arr.length; j++) {
-    temValue = temValue + arr[j] - arr[j - size];
-    maxValue = Math.max(temValue, maxValue);
-  }
+// function maxSum(arr, size) {
+//   if (size > arr.length) {
+//     return null;
+//   }
+//   let maxValue = 0;
+//   for (let i = 0; i < size; i++) {
+//     maxValue += arr[i];
+//   }
+//   let temValue = maxValue;
+//   for (let j = size; j < arr.length; j++) {
+//     temValue = temValue + arr[j] - arr[j - size];
+//     maxValue = Math.max(temValue, maxValue);
+//   }
 
-  console.log(maxValue);
-  return maxValue;
-}
-maxSum([2, 7, 3, 0, 6, 1, -5, -12, -11], 3); //12
+//   console.log(maxValue);
+//   return maxValue;
+// }
+// maxSum([2, 7, 3, 0, 6, 1, -5, -12, -11], 3); //12
 
-function minSum(arr, size) {
-  if (size > arr.length) {
-    return null;
-  }
-  let minValue = 0;
-  for (let i = 0; i < size; i++) {
-    minValue += arr[i];
-  }
-  let tempValue = minValue;
-  for (let j = size; j < arr.length; j++) {
-    tempValue = minValue + arr[j] - arr[j - size];
-    minValue = Math.min(tempValue, minValue);
-  }
+// function minSum(arr, size) {
+//   if (size > arr.length) {
+//     return null;
+//   }
+//   let minValue = 0;
+//   for (let i = 0; i < size; i++) {
+//     minValue += arr[i];
+//   }
+//   let tempValue = minValue;
+//   for (let j = size; j < arr.length; j++) {
+//     tempValue = minValue + arr[j] - arr[j - size];
+//     minValue = Math.min(tempValue, minValue);
+//   }
 
-  console.log(minValue);
-  return minValue;
-}
-minSum([2, 7, 3, 0, 6, 1, -5, -12, -11], 3); //-28
+//   console.log(minValue);
+//   return minValue;
+// }
+// minSum([2, 7, 3, 0, 6, 1, -5, -12, -11], 3); //-28
